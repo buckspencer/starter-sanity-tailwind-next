@@ -7,7 +7,7 @@ export default async function Footer() {
 	const { title, copyright } = await getSite()
 
 	return (
-		<section className="bg-ink text-center text-canvas">
+		<section className="text-center text-slate-900">
 			<div className="section py-8">
 				<div className="mx-auto max-w-screen-xl space-y-8">
 					<Navigation />
