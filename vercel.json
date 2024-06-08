@@ -11,9 +11,5 @@
       "src": "/(.*)",
       "dest": "/next/$1"
     }
-  ],
-  "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "outputDirectory": "next/.next",
-  "rootDirectory": "next"
+  ]
 }
