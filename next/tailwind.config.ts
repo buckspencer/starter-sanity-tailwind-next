@@ -9,13 +9,16 @@ const config: Config = {
 				ink: '#000',
 				canvas: '#fff',
 			},
-			fontFamily: {},
+			fontFamily: {
+				sans: ['Lora', 'serif'],
+			},
 			maxHeight: {
 				fold: 'calc(100svh - var(--header-height))',
 			},
 		},
 	},
 	plugins: [
+		require('tailwindcss-patterns'),
 		plugin(function ({ addVariant }) {
 			addVariant('header-open', 'body:has(#header-open:checked) &')
 			addVariant('header-closed', 'body:has(#header-open:not(:checked)) &')
