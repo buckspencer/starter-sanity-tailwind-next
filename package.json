@@ -4,5 +4,20 @@
   "description": "A Next.js + Sanity.io Starter Template",
   "main": "index.js",
   "author": "nuotsu <mitchell@nuotsu.dev> (https://nuotsu.dev)",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w next\" \"cd sanity && npx sanity dev -w sanity\"",
+    "build": "npm run build -w next && npm run build -w sanity",
+    "start": "npm run start -w next",
+    "sanity-dev": "npm run start -w sanity",
+    "sanity-build": "npm run build -w sanity",
+    "sanity-deploy": "npm run deploy -w sanity"
+  },
+  "workspaces": [
+    "next",
+    "sanity"
+  ],
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
 }
